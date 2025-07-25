@@ -26,21 +26,17 @@ header{
 .navbar{
     display: flex;
     justify-content: space-between;
- margin-top: 30px;
-
+    margin-top: 30px;
 }
 
-.nav-logo{
+/* .nav-logo{
     width: 135px;
     height: 80px;
-}
+} */
 
 .nav-items{
     display: flex;
     gap: 48px;
-}
-
-.nav-items{
     list-style: none;
 }
 
@@ -56,6 +52,13 @@ header{
 .nav-items > .nav-item-4 >  a {
     color: #252432;
 }
+
+.nav-logo {
+    width: 135px;
+    height: auto;
+}
+
+
 /* Banner Related Styles */
 .banner{
     display: flex;
@@ -82,4 +85,111 @@ header{
     width: 570px;
     height: 355px;
 }
-fonts.googleapis.com
+
+
+/* Plants Section Style */
+.plants-section{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.plants-details{
+    text-align: center;
+}
+.plants-title{
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0 auto;
+}
+.plants-title>span{
+    color: #E95A08;
+}
+
+.plants-sub-title{
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.5);
+    margin: 15px 126px 50px;
+}
+
+
+.plants-box{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.plants-card{
+    max-width: 270px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.plant-price > h4,h3{
+    font-size: 22;
+}
+.plant-price > h4{
+    font-weight: 500;
+}
+.plant-price > h3{
+    font-weight: bold;
+}
+.cart-btn{
+    color: #FFFFFF;
+    background-color: #E95A08;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    width: 100%;
+    height: 50px;
+}
+
+/* Header Related Responsive */
+
+@media screen and (max-width: 576px) {
+    .nav-item-1,
+    .nav-item-2,
+    .nav-item-3 {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+    }
+
+    .nav-logo {
+        width: 110px;
+        height: auto;
+    }
+
+    .nav-items {
+        gap: 0;
+    }
+
+    .nav-item-4 a {
+        font-weight: bold;
+        color: #252432;
+    }
+
+    /* Responsive banner */
+    .banner{
+        /* flex-direction: column; */
+        flex-direction: column-reverse;
+        margin: 0 auto;
+    }
+    .banner-img{
+        width: 100%;
+        height: auto;
+        /* margin: 28px 16px; */
+    }
+    .banner-description{
+        width: 100%;
+        height: 100%;
+        margin-top: 20px;
+    }
+    .banner-title{
+        font-size: 32px;
+        width: 100%;
+        height: auto;
+    }
+}
